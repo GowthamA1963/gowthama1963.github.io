@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog</title>
+
+  <!-- Prism for code highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Gowtham</h1>
+        <p class="hero-sub">Robotics Engineer · ROS · Embedded Systems · Open Source</p>
+        <p class="hero-lead">I build robots and robotic software — navigation, perception, and embedded systems.</p>
+        <p><a class="cta" href="/projects/">See projects</a> <a class="muted" href="/blog/">Read my notes</a></p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Animated robot SVG -->
+        <svg class="robot" width="220" height="220" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#4dabff"/>
+              <stop offset="1" stop-color="#1e90ff"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="40" y="50" rx="14" ry="14" width="120" height="90" fill="url(#g1)" opacity="0.95" />
+          <circle cx="100" cy="80" r="10" fill="#fff" class="robot-eye" />
+          <rect x="85" y="95" width="30" height="10" rx="3" fill="#0b2a3a" />
+          <g class="robot-arm-left">
+            <rect x="18" y="70" width="22" height="8" rx="4" fill="#1f6fbf"/>
+          </g>
+          <g class="robot-arm-right">
+            <rect x="160" y="70" width="22" height="8" rx="4" fill="#1f6fbf"/>
+          </g>
+          <rect x="60" y="140" width="80" height="10" rx="4" fill="#0b2a3a"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="header-row">
+      <div class="brand">
+        <a class="brand-link" href="/"><span class="robot-mini" aria-hidden="true">🤖</span> Gowtham</a>
+      </div>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" class="theme-button" aria-label="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+    <hr class="divider"/>
+  </header>
+
+  <main class="site-content">
+    <h1>Blog</h1>
+<p>Welcome to my robotics + ROS blog.</p>
+<p>Posts will be listed here:</p>
+<ul>
+  <li>
+    <a href="/blog/first-post/"></a> – Nov 15, 2025
+  </li>
+</ul>
+
+  </main>
+
+  <footer class="site-footer">
+    <hr class="divider"/>
+    <p>Built with Eleventy • Robotics Edition • <a href="https://github.com/yourusername/reponame">repo</a></p>
+  </footer>
+
+  <!-- Prism JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <script>
+    // Theme toggle script (persist)
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    if (localStorage.getItem("theme") === "dark") root.classList.add("dark");
+
+    btn.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+    });
+
+    // Small robot eye blink animation (class toggle)
+    const eye = document.querySelector('.robot-eye');
+    if (eye) {
+      setInterval(() => {
+        eye.style.transform = 'scaleY(0.2)';
+        setTimeout(()=> eye.style.transform='scaleY(1)', 120);
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
