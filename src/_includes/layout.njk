@@ -11,60 +11,35 @@
 </head>
 
 <body>
-  <!-- HERO: Nav2 / ROS2 Themed -->
-<section class="hero nav2-hero">
+ <!-- HERO: Minimal Robotics Theme -->
+<section class="hero minimal-hero">
   <div class="hero-container">
 
     <div class="hero-left">
       <h1 class="hero-title">Gowtham</h1>
-      <p class="hero-subtitle">Robotics Engineer • ROS2 • Navigation • Perception</p>
+      <p class="hero-subtitle">Robotics Engineer • ROS2 • Navigation • Embedded Systems</p>
 
       <p class="hero-desc">
-        I build autonomous mobile robots using <strong>ROS2 Nav2</strong>,
-        <strong>costmaps</strong>, <strong>TF</strong>, <strong>SLAM</strong>, and
-        <strong>embedded systems</strong>.
-        I work on navigation pipelines, depth/LiDAR obstacle detection,
-        and real-world robotic deployments.
+        I work on autonomous mobile robots, ROS2 navigation pipelines, perception,
+        and embedded systems. I build robots that move, think, and interact.
       </p>
 
       <div class="hero-buttons">
-        <a href="/projects/" class="btn-primary">View Robotics Projects</a>
-        <a href="/blog/" class="btn-secondary">Read ROS Notes</a>
+        <a href="/projects/" class="btn-primary">View Projects</a>
+        <a href="/blog/" class="btn-secondary">Read Blog</a>
       </div>
     </div>
 
     <div class="hero-right">
-      <!-- NAV2 themed robot visualization -->
-      <svg width="260" height="260" viewBox="0 0 260 260" class="nav2-robot">
-        <!-- Grid -->
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(110,120,140,0.2)" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-
-        <!-- Path planned (Bezier path) -->
-        <path d="M40 220 C 80 160, 140 140, 200 60"
-              stroke="#4dabff"
-              stroke-width="4"
-              fill="none"
-              stroke-linecap="round"
-              class="nav2-path"/>
-
-        <!-- Local costmap obstacles -->
-        <circle cx="90" cy="180" r="10" fill="#ff4757" opacity="0.8"/>
-        <circle cx="150" cy="120" r="12" fill="#ff4757" opacity="0.8"/>
-        <circle cx="120" cy="90" r="6" fill="#ff4757" opacity="0.8"/>
-
-        <!-- Robot icon -->
-        <g class="robot-icon" transform="translate(30,200)">
-          <rect width="40" height="40" rx="6" fill="#1e90ff"/>
-          <circle cx="12" cy="15" r="4" fill="#fff"/>
-          <circle cx="28" cy="15" r="4" fill="#fff"/>
-          <rect x="10" y="28" width="20" height="6" rx="2" fill="#fff"/>
-        </g>
-
+      <!-- Minimal robot illustration -->
+      <svg class="mini-robot" width="140" height="140" viewBox="0 0 200 200">
+        <rect x="60" y="60" width="80" height="70" rx="12" fill="#1e90ff" opacity="0.92"/>
+        <circle cx="85" cy="90" r="8" fill="#fff"/>
+        <circle cx="115" cy="90" r="8" fill="#fff"/>
+        <rect x="85" y="110" width="30" height="10" rx="3" fill="#0b2a3a"/>
+        <rect x="50" y="135" width="100" height="12" rx="4" fill="#0b2a3a"/>
+        <circle cx="70" cy="155" r="10" fill="#1e90ff"/>
+        <circle cx="130" cy="155" r="10" fill="#1e90ff"/>
       </svg>
     </div>
 
@@ -99,7 +74,7 @@
 
   <footer class="site-footer">
     <hr class="divider"/>
-    <p>Built with Eleventy • Robotics Edition • <a href="https://github.com/yourusername/reponame">repo</a></p>
+    <p>Built with Eleventy • Robotics Edition • <a href="https://github.com/GowthamA1963/gowthama1963.github.io">repo</a></p>
   </footer>
 
   <!-- Prism JS -->
