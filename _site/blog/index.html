@@ -11,40 +11,66 @@
 </head>
 
 <body>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1>Gowtham</h1>
-        <p class="hero-sub">Robotics Engineer · ROS · Embedded Systems · Open Source</p>
-        <p class="hero-lead">I build robots and robotic software — navigation, perception, and embedded systems.</p>
-        <p><a class="cta" href="/projects/">See projects</a> <a class="muted" href="/blog/">Read my notes</a></p>
-      </div>
+  <!-- HERO: Nav2 / ROS2 Themed -->
+<section class="hero nav2-hero">
+  <div class="hero-container">
 
-      <div class="hero-visual" aria-hidden="true">
-        <!-- Animated robot SVG -->
-        <svg class="robot" width="220" height="220" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#4dabff"/>
-              <stop offset="1" stop-color="#1e90ff"/>
-            </linearGradient>
-          </defs>
+    <div class="hero-left">
+      <h1 class="hero-title">Gowtham</h1>
+      <p class="hero-subtitle">Robotics Engineer • ROS2 • Navigation • Perception</p>
 
-          <rect x="40" y="50" rx="14" ry="14" width="120" height="90" fill="url(#g1)" opacity="0.95" />
-          <circle cx="100" cy="80" r="10" fill="#fff" class="robot-eye" />
-          <rect x="85" y="95" width="30" height="10" rx="3" fill="#0b2a3a" />
-          <g class="robot-arm-left">
-            <rect x="18" y="70" width="22" height="8" rx="4" fill="#1f6fbf"/>
-          </g>
-          <g class="robot-arm-right">
-            <rect x="160" y="70" width="22" height="8" rx="4" fill="#1f6fbf"/>
-          </g>
-          <rect x="60" y="140" width="80" height="10" rx="4" fill="#0b2a3a"/>
-        </svg>
+      <p class="hero-desc">
+        I build autonomous mobile robots using <strong>ROS2 Nav2</strong>,
+        <strong>costmaps</strong>, <strong>TF</strong>, <strong>SLAM</strong>, and
+        <strong>embedded systems</strong>.
+        I work on navigation pipelines, depth/LiDAR obstacle detection,
+        and real-world robotic deployments.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/projects/" class="btn-primary">View Robotics Projects</a>
+        <a href="/blog/" class="btn-secondary">Read ROS Notes</a>
       </div>
     </div>
-  </section>
+
+    <div class="hero-right">
+      <!-- NAV2 themed robot visualization -->
+      <svg width="260" height="260" viewBox="0 0 260 260" class="nav2-robot">
+        <!-- Grid -->
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(110,120,140,0.2)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- Path planned (Bezier path) -->
+        <path d="M40 220 C 80 160, 140 140, 200 60"
+              stroke="#4dabff"
+              stroke-width="4"
+              fill="none"
+              stroke-linecap="round"
+              class="nav2-path"/>
+
+        <!-- Local costmap obstacles -->
+        <circle cx="90" cy="180" r="10" fill="#ff4757" opacity="0.8"/>
+        <circle cx="150" cy="120" r="12" fill="#ff4757" opacity="0.8"/>
+        <circle cx="120" cy="90" r="6" fill="#ff4757" opacity="0.8"/>
+
+        <!-- Robot icon -->
+        <g class="robot-icon" transform="translate(30,200)">
+          <rect width="40" height="40" rx="6" fill="#1e90ff"/>
+          <circle cx="12" cy="15" r="4" fill="#fff"/>
+          <circle cx="28" cy="15" r="4" fill="#fff"/>
+          <rect x="10" y="28" width="20" height="6" rx="2" fill="#fff"/>
+        </g>
+
+      </svg>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Header / Nav -->
   <header class="header">
@@ -73,7 +99,7 @@
 <p>Posts will be listed here:</p>
 <ul>
   <li>
-    <a href="/blog/first-post/"></a> – Nov 15, 2025
+    <a href="/blog/first-post/">My First Robotics Blog Post</a> – Jan 01, 2025
   </li>
 </ul>
 

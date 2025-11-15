@@ -89,3 +89,111 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", mo
   .hero h1{font-size:32px}
   .nav{display:none}
 }
+
+/* NAV2 / ROS2 Hero Theme */
+.nav2-hero {
+  padding: 40px 0;
+  margin-bottom: 12px;
+}
+
+.hero-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 42px;
+  margin: 0;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.hero-desc {
+  margin: 14px 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  margin-top: 18px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  color: var(--accent);
+}
+
+/* Right side robot visualization */
+.hero-right {
+  flex: 0 0 260px;
+}
+
+.nav2-robot {
+  filter: drop-shadow(0 8px 18px rgba(10,20,30,0.18));
+}
+
+/* Animated planned path (Nav2 style) */
+.nav2-path {
+  stroke-dasharray: 6 8;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+/* Robot floating animation */
+.robot-icon {
+  animation: floatNav2 4s ease-in-out infinite;
+}
+
+@keyframes floatNav2 {
+  0% { transform: translate(30px,200px); }
+  50% { transform: translate(30px,195px); }
+  100% { transform: translate(30px,200px); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 820px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-right {
+    margin-top: 20px;
+  }
+}
