@@ -16,73 +16,9 @@
   <div class="hero-container">
 
     <div class="hero-left">
-      <h1 class="hero-title">Gowtham</h1>
-      <p class="hero-subtitle">Robotics Engineer • ROS2 • Navigation • Manipulation</p>
+      <h1 class="hero-title">Gowtham Ammanamanchi</h1>
+      <p class="hero-subtitle">Robotics • ROS2 • Embedded Systems</p>
 
-      <p class="hero-desc">
-        I build autonomous mobile robots and manipulation systems — integrating navigation,
-        perception, and embedded controllers for real-world robotics.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="/projects/" class="btn-primary">View Projects</a>
-        <a href="/blog/" class="btn-secondary">Read Blog</a>
-      </div>
-    </div>
-
-    <div class="hero-right" aria-hidden="true">
-      <!-- Animated robot SVG: base moves left-right, manipulator moves up-down -->
-      <svg class="robot-scene" width="220" height="140" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated mobile robot with manipulator">
-        <defs>
-          <linearGradient id="robotGrad" x1="0" x2="1">
-            <stop offset="0" stop-color="var(--accent)" stop-opacity="0.95"/>
-            <stop offset="1" stop-color="rgba(77,171,255,0.85)"/>
-          </linearGradient>
-        </defs>
-
-        <!-- ground line -->
-        <rect x="0" y="118" width="220" height="6" fill="var(--divider)" rx="3"/>
-
-        <!-- group that slides left-right -->
-        <g class="robot-slide" transform="translate(20,0)">
-          <!-- robot base -->
-          <g class="robot-base" transform="translate(0,18)">
-            <rect x="0" y="0" width="120" height="48" rx="10" fill="url(#robotGrad)"/>
-            <!-- wheel left -->
-            <g transform="translate(18,48)">
-              <circle cx="0" cy="0" r="12" fill="#0b1220" opacity="0.9"/>
-              <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,0.12)"/>
-            </g>
-            <!-- wheel right -->
-            <g transform="translate(102,48)">
-              <circle cx="0" cy="0" r="12" fill="#0b1220" opacity="0.9"/>
-              <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,0.12)"/>
-            </g>
-
-            <!-- lidar / sensor on front -->
-            <circle cx="110" cy="18" r="6" fill="#fff" opacity="0.9"/>
-
-            <!-- manipulator mount (moves up-down) -->
-            <g class="manipulator" transform="translate(60,-10)">
-              <!-- mast -->
-              <rect x="-6" y="0" width="12" height="36" rx="4" fill="#0b1220" />
-              <!-- shoulder (pivot) -->
-              <g class="arm" transform="translate(0,6)">
-                <!-- upper arm -->
-                <rect x="0" y="0" width="46" height="8" rx="4" fill="#e6eef6" opacity="0.95" />
-                <!-- elbow joint -->
-                <circle cx="48" cy="4" r="6" fill="#0b1220"/>
-                <!-- lower arm (gripper) -->
-                <g transform="translate(52,-6)">
-                  <rect x="0" y="6" width="28" height="6" rx="3" fill="#e6eef6" />
-                  <rect x="24" y="0" width="6" height="18" rx="2" fill="#0b1220"/>
-                </g>
-              </g>
-            </g>
-          </g>
-        </g>
-      </svg>
-    </div>
 
   </div>
 </section>
@@ -91,10 +27,6 @@
   <!-- Header / Nav -->
   <header class="header">
     <div class="header-row">
-      <div class="brand">
-        <a class="brand-link" href="/"><span class="robot-mini" aria-hidden="true">🤖</span> Gowtham</a>
-      </div>
-
       <nav class="nav">
         <a href="/">Home</a>
         <a href="/about/">About</a>
