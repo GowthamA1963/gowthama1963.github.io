@@ -3,93 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Anurag Senapati - Robotics Engineer</title>
     <style>
-        /* General Setup */
+        /* Professional Engineering Theme */
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f4f4f4;
+            --primary-color: #0d1b2a; /* Dark Navy */
+            --accent-color: #e63946;  /* Technical Red */
+            --text-color: #1b263b;
+            --bg-color: #f1faee;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             color: var(--text-color);
             background-color: var(--bg-color);
         }
         
-        /* Layout */
         .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        /* Header Section */
+        /* Header */
         header {
             background: #fff;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--accent-color);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--primary-color);
         }
-        header h1 { margin: 0; font-size: 2.5em; color: var(--primary-color); }
-        header p { font-size: 1.2em; color: #666; }
+        header h1 { margin: 0; font-size: 2.8em; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+        header p { font-size: 1.4em; color: #555; margin-top: 10px; font-weight: 300; }
         
-        /* Navigation */
-        nav { text-align: center; margin-top: 20px; }
+        /* Nav */
+        nav { margin-top: 25px; }
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             color: var(--primary-color);
-            font-weight: bold;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
-        nav a:hover { color: var(--accent-color); }
+        nav a:hover { color: var(--accent-color); text-decoration: underline; }
 
-        /* Sections */
+        /* Content */
         section {
             background: #fff;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin: 30px 0;
+            padding: 40px;
+            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { margin-top: 0; color: var(--primary-color); text-transform: uppercase; font-size: 1.5em; }
+
+        /* Tech Stack Tags */
+        .tech-stack { margin-top: 10px; }
+        .tag {
+            background: #e0e1dd;
+            padding: 4px 8px;
+            font-size: 0.8em;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-family: monospace;
+        }
 
         /* Projects Grid */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .project-card {
             border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            transition: transform 0.2s;
+            padding: 20px;
+            background: #fafafa;
         }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .project-card h3 { margin-top: 0; }
         .btn {
             display: inline-block;
-            background: var(--accent-color);
+            background: var(--primary-color);
             color: white;
-            padding: 8px 15px;
+            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 4px;
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 0.9em;
         }
+        .btn:hover { background: var(--accent-color); }
 
-        /* Footer */
-        footer { text-align: center; padding: 20px; margin-top: 40px; color: #777; font-size: 0.9em; }
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>[Your Name]</h1>
-        <p>Developer | Creative Thinker | Learner</p>
+        <h1>Anurag Senapati</h1>
+        <p>Robotics Engineer</p>
         
         <nav>
             <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -98,52 +108,78 @@
     <div class="container">
         
         <section id="about">
-            <h2>About Me</h2>
+            <h2>Professional Profile</h2>
             <p>
-                Hello! I am a passionate individual who loves building tools and exploring new technologies.
-                I have a strong interest in software development and creative problem-solving.
-                When I'm not coding, you can find me exploring history or diving into new stories.
+                Robotics Engineer specializing in autonomous systems, path planning, and sensor fusion. 
+                I bridge the gap between hardware constraints and software intelligence to build robust robotic solutions. 
+                Experienced with ROS 2 architectures and Python-based control algorithms.
             </p>
         </section>
 
+        <section id="expertise">
+            <h2>Technical Skills</h2>
+            <p><strong>Languages:</strong> Python, C++</p>
+            <p><strong>Frameworks:</strong> ROS 2 (Humble/Iron), OpenCV, Gazebo</p>
+            <p><strong>Hardware:</strong> LiDAR, IMU Integration, Microcontrollers</p>
+        </section>
+
         <section id="projects">
-            <h2>My Projects</h2>
+            <h2>Engineering Projects</h2>
             <div class="project-grid">
                 
                 <div class="project-card">
-                    <h3>Project Name 1</h3>
-                    <p>A brief description of this project. What problem did it solve?</p>
+                    <h3>Autonomous Navigation Stack</h3>
+                    <div class="tech-stack">
+                        <span class="tag">ROS 2</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Nav2</span>
+                    </div>
+                    <p>
+                        Engineered a custom navigation stack for a mobile robot. 
+                        Implemented SLAM for mapping and configured costmaps for dynamic obstacle avoidance.
+                    </p>
+                    <a href="#" class="btn">View Architecture</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Robotic Arm Kinematics</h3>
+                    <div class="tech-stack">
+                        <span class="tag">Inverse Kinematics</span>
+                        <span class="tag">MoveIt</span>
+                    </div>
+                    <p>
+                        [Placeholder] Developed control algorithms for a 6-DOF robotic arm. 
+                        Solved inverse kinematics for precise pick-and-place operations.
+                    </p>
                     <a href="#" class="btn">View Code</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Name 2</h3>
-                    <p>A brief description of this project. What tools did you use?</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Project Name 3</h3>
-                    <p>A brief description of this project.</p>
-                    <a href="#" class="btn">View Code</a>
+                    <h3>Computer Vision Pipeline</h3>
+                    <div class="tech-stack">
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">YOLO</span>
+                    </div>
+                    <p>
+                        [Placeholder] Integrated object detection for real-time environment interaction. 
+                        Processed point cloud data for 3D spatial awareness.
+                    </p>
+                    <a href="#" class="btn">View Demo</a>
                 </div>
 
             </div>
         </section>
 
         <section id="contact">
-            <h2>Get in Touch</h2>
-            <p>I'm always open to discussing new projects or opportunities.</p>
+            <h2>Contact</h2>
+            <p>Open to opportunities in Robotics Engineering and R&D.</p>
             <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>
-                <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
-            </p>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2025 [Your Name]. Hosted on GitHub Pages.</p>
+        <p>&copy; 2025 Anurag Senapati</p>
     </footer>
 
 </body>
