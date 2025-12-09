@@ -25,29 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, startDelay);
   }
 
-  /* LiDAR Reveal Logic */
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Add a small delay for effect or trigger immediately
-        setTimeout(() => {
-          entry.target.classList.add('scanned');
-        }, 100);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  const targets = document.querySelectorAll('.lidar-target');
-  targets.forEach(target => {
-    observer.observe(target);
-  });
 
   /* System HUD Logic */
   function updateHUD() {
