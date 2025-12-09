@@ -155,10 +155,13 @@ header {
 
 .hero-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
+  /* Smaller as requested */
   height: auto;
   filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.2));
   animation: float 6s ease-in-out infinite;
+  mix-blend-mode: lighten;
+  /* Hides black background if present */
 }
 
 /* Float Animation */
