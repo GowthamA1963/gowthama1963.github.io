@@ -355,3 +355,22 @@ footer {
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
+
+/* Typewriter Cursor */
+.typing-cursor::after {
+  content: '_';
+  color: var(--accent-color);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
