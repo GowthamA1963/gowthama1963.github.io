@@ -127,7 +127,74 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* Align image to right */
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.2));
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    /* Image on top? or text on top? Standard is visual on top or bottom. Text top is safer for "first impression". */
+    text-align: center;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-text {
+    display: flex;
+    /* Centering content */
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hero-prefix {
@@ -138,7 +205,8 @@ header {
 }
 
 h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  /* Slightly reduced max size for side-by-side */
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 8px;

@@ -30,14 +30,21 @@
     <div class="container">
 
         <header>
-            <div class="hero-prefix">Hi, my name is</div>
-            <h1 id="typewriter-text">Gowtham Ammanamanchi.</h1>
-            <h2 class="subtitle">I build autonomous systems.</h2>
-            <p class="hero-desc">
-                I'm a robotics engineer specializing in path planning, sensor fusion, and ROS 2 architectures.
-                Turning hardware constraints into software intelligence.
-            </p>
-            <a href="#projects" class="btn">Check out my work</a>
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <div class="hero-prefix">Hi, my name is</div>
+                    <h1 id="typewriter-text">Gowtham Ammanamanchi.</h1>
+                    <h2 class="subtitle">I build autonomous systems.</h2>
+                    <p class="hero-desc">
+                        I'm a robotics engineer specializing in path planning, sensor fusion, and ROS 2 architectures.
+                        Turning hardware constraints into software intelligence.
+                    </p>
+                    <a href="#projects" class="btn">Check out my work</a>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/hero-robot.png" alt="Cyberpunk Mechanical Arm" class="hero-image">
+                </div>
+            </div>
         </header>
 
         <section id="about">
@@ -129,7 +136,6 @@
                         <span>Python</span>
                         <span>MoveIt2</span>
                         <span>Industrial Automation</span>
-                        <span>SLAM</span>
                     </div>
                 </div>
 
@@ -157,13 +163,14 @@
                     </div>
                     <h3 class="project-title">EMMA (Medical Assistant)</h3>
                     <p class="project-desc">
-                        Interactive healthcare robot combining ROS 2 navigation, AI monitoring, and IoT for autonomous
-                        patient care and medicine delivery.
+                        An autonomous nursing robot assistant designed for hospital environments. Features autonomous
+                        navigation, patient interaction, and secure delivery.
                     </p>
                     <div class="project-tech">
                         <span>ROS 2</span>
-                        <span>IoT</span>
-                        <span>AI</span>
+                        <span>Nav2</span>
+                        <span>Python</span>
+                        <span>Gazebo</span>
                     </div>
                 </div>
 
@@ -171,28 +178,23 @@
         </section>
 
         <section id="contact">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
             <div class="contact-content">
-                <h2 class="hero-prefix">What's Next?</h2>
-                <h2 style="font-size: 3rem; color: var(--text-primary); margin-bottom: 24px;">Get In Touch</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">
-                    I'm currently looking for new opportunities in robotics R&D.
+                <p style="color: var(--text-secondary); margin-bottom: 24px;">
                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>
-                <a href="mailto:gowthamofficial1963@gmail.com" class="btn">Say Hello</a>
+                <a href="mailto:your.email@example.com" class="btn">Say Hello</a>
             </div>
         </section>
 
         <footer>
+            <div style="margin-bottom: 16px;">
+                <!-- Social Icons would go here -->
+            </div>
             <p>Built by Gowtham Ammanamanchi</p>
         </footer>
-
-        <!-- System HUD -->
-        <div id="system-hud">
-            <div class="hud-line">SYS: <span style="color: var(--accent-color)">ONLINE</span></div>
-            <div class="hud-line">TIME: <span id="hud-time">00:00:00</span></div>
-            <div class="hud-line">BAT: <span id="hud-bat">100%</span> [AC]</div>
-            <div class="hud-line">CPU: <span id="hud-cpu">12%</span></div>
-        </div>
 
         <script src="js/main.js"></script>
 </body>
