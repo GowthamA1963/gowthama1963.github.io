@@ -188,9 +188,38 @@
             <p>Built by Gowtham Ammanamanchi</p>
         </footer>
 
-    </div>
+        <!-- System HUD -->
+        <div id="system-hud">
+            <div class="hud-line">SYS: <span style="color: var(--accent-color)">ONLINE</span></div>
+            <div class="hud-line">TIME: <span id="hud-time">00:00:00</span></div>
+            <div class="hud-line">BAT: <span id="hud-bat">100%</span> [AC]</div>
+            <div class="hud-line">CPU: <span id="hud-cpu">12%</span></div>
+        </div>
 
-    <script src="js/main.js"></script>
+        <!-- Terminal Toggle -->
+        <button id="terminal-toggle">
+            <span style="font-size: 1.2rem;">>_</span>
+        </button>
+
+        <!-- Terminal Overlay -->
+        <div id="terminal-overlay">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span>user@ros2:~/portfolio</span>
+                    <button id="terminal-close">X</button>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <div>Welcome to ROS2 Portfolio Terminal v1.0.0</div>
+                    <div>Type 'help' for available commands.</div>
+                    <div class="input-line">
+                        <span class="prompt">user@ros2:~$</span>
+                        <input type="text" id="terminal-input" autocomplete="off" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
 </body>
 
 </html>
