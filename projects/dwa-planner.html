@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom DWA Local Planner | Gowtham Ammanamanchi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <a href="#" class="brand">GA</a>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Work</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="project-detail-header">
+      <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+      <h1 style="font-size: 3rem; margin-bottom: 16px;">Custom DWA Local Planner</h1>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 24px;">
+        A custom implementation of the Dynamic Window Approach for ROS2 navigation
+      </p>
+      <div class="tech-tag-list">
+        <span class="tech-tag">ROS 2</span>
+        <span class="tech-tag">Gazebo</span>
+        <span class="tech-tag">TurtleBot3</span>
+        <span class="tech-tag">C++</span>
+        <span class="tech-tag">Path Planning</span>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">What is DWA?</h2>
+      <p style="margin-bottom: 24px;">
+        The <strong>Dynamic Window Approach (DWA)</strong> is a local path planning algorithm designed for mobile
+        robots.
+        It works by computing velocity commands in real-time based on the robot's current state and sensor data.
+        The algorithm searches through a "dynamic window" of achievable velocities, considering the robot's kinematic
+        constraints and obstacle avoidance requirements.
+      </p>
+      <p style="margin-bottom: 24px;">
+        DWA evaluates multiple trajectory candidates and selects the optimal one based on a cost function that balances:
+      </p>
+      <ul style="margin-left: 24px; margin-bottom: 32px; color: var(--text-secondary);">
+        <li style="margin-bottom: 8px;">Progress toward the goal</li>
+        <li style="margin-bottom: 8px;">Obstacle clearance</li>
+        <li style="margin-bottom: 8px;">Velocity smoothness</li>
+      </ul>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Project Overview</h2>
+      <p style="margin-bottom: 24px;">
+        This repository contains a custom implementation of the DWA local planner for ROS2, specifically designed
+        for the <strong>TurtleBot3</strong> robot in a Gazebo simulation environment. The planner computes velocity
+        commands (<code>cmd_vel</code>) based on sensor data including LaserScan and Odometry, providing smooth
+        navigation while avoiding obstacles.
+      </p>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Motivation</h2>
+      <p style="margin-bottom: 32px;">
+        I built this project to deepen my understanding of <strong>path planning fundamentals in ROS2</strong>.
+        By implementing DWA from scratch, I gained hands-on experience with:
+      </p>
+      <ul style="margin-left: 24px; margin-bottom: 32px; color: var(--text-secondary);">
+        <li style="margin-bottom: 8px;">Local trajectory optimization</li>
+        <li style="margin-bottom: 8px;">Sensor data processing (LaserScan, Odometry)</li>
+        <li style="margin-bottom: 8px;">Velocity command generation</li>
+        <li style="margin-bottom: 8px;">Real-time obstacle avoidance</li>
+        <li style="margin-bottom: 8px;">ROS2 node architecture and communication</li>
+      </ul>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Technical Implementation</h2>
+      <p style="margin-bottom: 24px;">
+        The planner subscribes to sensor topics and publishes velocity commands:
+      </p>
+      <ul style="margin-left: 24px; margin-bottom: 32px; color: var(--text-secondary);">
+        <li style="margin-bottom: 8px;"><strong>Input:</strong> <code>/scan</code> (LaserScan), <code>/odom</code>
+          (Odometry)</li>
+        <li style="margin-bottom: 8px;"><strong>Output:</strong> <code>/cmd_vel</code> (Twist - linear and angular
+          velocities)</li>
+        <li style="margin-bottom: 8px;"><strong>Algorithm:</strong> Dynamic window search with trajectory scoring</li>
+        <li style="margin-bottom: 8px;"><strong>Environment:</strong> Gazebo simulation with TurtleBot3 Waffle Pi</li>
+      </ul>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Simulation Results</h2>
+
+      <div style="margin-bottom: 32px;">
+        <h3 style="color: var(--text-primary); margin-bottom: 12px;">Gazebo Environment</h3>
+        <img src="../images/gazebo final position.png" alt="Gazebo Simulation"
+          style="width: 100%; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 8px;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">TurtleBot3 navigating to the goal position in Gazebo
+        </p>
+      </div>
+
+      <div style="margin-bottom: 32px;">
+        <h3 style="color: var(--text-primary); margin-bottom: 12px;">RViz Visualization</h3>
+        <img src="../images/rviz output 1.png" alt="RViz Output"
+          style="width: 100%; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 8px;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">Real-time visualization of laser scans and robot
+          trajectory</p>
+      </div>
+
+      <div style="margin-bottom: 32px;">
+        <h3 style="color: var(--text-primary); margin-bottom: 12px;">Terminal Output</h3>
+        <img src="../images/terminal commands.png" alt="Terminal Commands"
+          style="width: 100%; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 8px;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">Launch commands and node execution</p>
+      </div>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Key Features</h2>
+      <ul style="margin-left: 24px; margin-bottom: 32px; color: var(--text-secondary);">
+        <li style="margin-bottom: 8px;">Real-time velocity command generation</li>
+        <li style="margin-bottom: 8px;">Dynamic obstacle avoidance using laser scan data</li>
+        <li style="margin-bottom: 8px;">Smooth trajectory planning with kinematic constraints</li>
+        <li style="margin-bottom: 8px;">Configurable cost function parameters</li>
+        <li style="margin-bottom: 8px;">Integration with ROS2 navigation stack</li>
+      </ul>
+
+      <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 100px;">
+    <p>Built by Gowtham Ammanamanchi</p>
+  </footer>
+</body>
+
+</html>
