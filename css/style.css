@@ -412,6 +412,238 @@ footer {
   color: var(--text-secondary);
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+  /* Typography adjustments */
+  body {
+    font-size: 16px;
+  }
+
+  /* Brand and Navigation */
+  .brand {
+    top: 16px;
+    left: 16px;
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  nav {
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding-top: 80px;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 250px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  h2.subtitle {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Section spacing */
+  section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title::after {
+    width: 100px;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-item {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Experience Timeline */
+  .timeline::before {
+    left: 10px;
+  }
+
+  .experience-card {
+    margin-left: 30px;
+    padding: 16px;
+  }
+
+  .timeline-dot {
+    left: -31px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .role-title {
+    font-size: 1rem;
+  }
+
+  .exp-desc {
+    font-size: 0.9rem;
+  }
+
+  /* Project Grid */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .project-image img {
+    height: 180px;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+
+  .project-tech {
+    font-size: 0.75rem;
+  }
+
+  /* Contact */
+  .contact-content {
+    padding: 0 16px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 16px;
+    font-size: 0.75rem;
+  }
+
+  /* Project Detail Pages */
+  .project-detail-header {
+    padding-top: 80px;
+  }
+
+  .project-detail-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .project-content {
+    font-size: 0.95rem;
+  }
+
+  .tech-tag-list {
+    flex-wrap: wrap;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+
+  /* Even smaller adjustments */
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2.subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-image {
+    max-width: 200px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-title::after {
+    width: 60px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-card {
+    margin-left: 25px;
+  }
+
+  .project-image img {
+    height: 150px;
+  }
+}
+
 /* Project Detail Specific */
 .project-detail-header {
   margin-bottom: 40px;
