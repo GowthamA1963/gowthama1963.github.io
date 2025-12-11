@@ -833,11 +833,9 @@ footer {
 .company-logo {
   width: 48px;
   height: 48px;
-  border-radius: 1px;
   object-fit: contain;
   background: white;
   padding: 4px;
-  box-sizing: border-box;
 }
 
 .role-title {
