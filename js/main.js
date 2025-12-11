@@ -27,4 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }, startDelay);
   }
 
+  /* Scroll Animation for Skills */
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all skill categories
+  const skillCategories = document.querySelectorAll('.skills-category');
+  skillCategories.forEach(category => {
+    observer.observe(category);
+  });
+
 });
