@@ -78,17 +78,56 @@
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
             </div>
-            <div style="color: var(--text-secondary); max-width: 700px;">
-                <p style="margin-bottom: 16px;">
-                    Hello! My journey in engineering started with a fascination for how things move. Today, I'm deeply
-                    embedded in the world of
-                    <span style="color: var(--accent-color)">Robotics and AI</span>.
-                </p>
-                <p>
-                    I currently focus on developing robust navigation stacks and computer vision pipelines. I enjoy
-                    bridging the gap between
-                    theoretical algorithms and real-world hardware implementation.
-                </p>
+            <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start;">
+                <div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        Hi, I'm <strong style="color: var(--accent-color);">Gowtham Ammanamanchi</strong> — an
+
+                        <strong>Electronics and Communication Engineering graduate</strong> specializing in
+                        <strong style="color: var(--accent-color);">embedded systems and robotics</strong>.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; color: var(--text-secondary);">
+                        I'm committed to advancing the frontiers of <strong>intelligent automation</strong> and
+                        <strong>system design</strong>. With a solid academic foundation and hands-on experience,
+                        I've built, programmed, and integrated robotic systems that combine precision engineering
+                        with real-world impact.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; color: var(--text-secondary);">
+                        My expertise spans <strong style="color: var(--text-primary);">embedded system
+                            development</strong>,
+                        <strong style="color: var(--text-primary);">microcontroller programming</strong>,
+                        <strong style="color: var(--text-primary);">hardware-software integration</strong>, and
+                        <strong style="color: var(--text-primary);">ROS-based robotics</strong>. I thrive in bridging
+                        theory with practical implementation—whether it's designing low-level firmware for sensors and
+                        actuators, simulating autonomous robots in Gazebo, or integrating LiDAR-based navigation using
+                        ROS2.
+                    </p>
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                        I'm eager to collaborate on cutting-edge robotics and embedded solutions, and contribute
+                        meaningfully to projects that push the boundaries of innovation.
+                        <strong style="color: var(--accent-color);">Let's connect !!</strong>
+                    </p>
+                </div>
+                <div style="position: sticky; top: 100px;">
+                    <div style="display: grid; gap: 16px;">
+                        <div>
+                            <img src="images/profile.jpg" alt="Gowtham at ROSCon India 2024" style="width: 100%; border-radius: 8px; border: 2px solid var(--accent-color);
+                                        box-shadow: 0 8px 24px rgba(100, 255, 218, 0.2);">
+                            <p style="text-align: center; margin-top: 8px; font-family: var(--font-mono);
+                                      font-size: 0.8rem; color: var(--text-secondary);">
+                                📍 ROSCon India 2024, Bengaluru
+                            </p>
+                        </div>
+                        <div>
+                            <img src="images/profile-emma.jpg" alt="Gowtham with EMMA Robot" style="width: 100%; border-radius: 8px; border: 2px solid var(--accent-color);
+                                        box-shadow: 0 8px 24px rgba(100, 255, 218, 0.2);">
+                            <p style="text-align: center; margin-top: 8px; font-family: var(--font-mono);
+                                      font-size: 0.8rem; color: var(--text-secondary);">
+                                🤖 With EMMA - Medical Assistant Robot
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -178,17 +217,20 @@
                 <div class="experience-card">
                     <div class="timeline-dot"></div>
                     <div class="exp-header">
-                        <img src="images/petpooja-logo.png" alt="Petpooja Logo" class="company-logo">
+                        <img src="images/petpooja-logo.png" alt="Petpooja" class="company-logo">
                         <div>
-                            <div class="role-title">Robotics Software Engineer (Apprentice)</div>
-                            <div class="company-name">Petpooja</div>
+                            <h3 class="role-title">Robotics Software Engineer Intern</h3>
+                            <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.85rem;">
+                                Petpooja • Jun 2024 - Aug 2024
+                            </p>
                         </div>
                     </div>
-                    <div class="duration">Sep 2025 - Present · 4 mos · Ahmedabad, India</div>
-                    <ul class="exp-desc">
-                        <li>Working on a food delivery robot using ROS 2, Nav2, OpenCV, and Open RMF.</li>
-                        <li>Focused on enhancing navigation reliability and fleet management.</li>
-                    </ul>
+                    <p class="exp-desc">
+                        Developed autonomous food delivery robots using ROS 2 Humble and Nav2 stack. Implemented
+                        SLAM-based navigation, integrated sensor fusion (LiDAR, depth cameras), and optimized path
+                        planning algorithms for dynamic restaurant environments. Built real-time monitoring dashboards
+                        and conducted extensive simulation testing in Gazebo.
+                    </p>
                     <div class="project-tech" style="margin-top: 12px;">
                         <span>ROS 2</span>
                         <span>Nav2</span>
@@ -202,26 +244,24 @@
                 <div class="experience-card">
                     <div class="timeline-dot"></div>
                     <div class="exp-header">
-                        <img src="images/deceler-logo.png" alt="DECELER Logo" class="company-logo">
+                        <img src="images/deceler-logo.png" alt="Deceler Technologies" class="company-logo">
                         <div>
-                            <div class="role-title">Junior Robotics Engineer (Intern)</div>
-                            <div class="company-name">DECELER</div>
+                            <h3 class="role-title">Robotics Engineer Intern</h3>
+                            <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.85rem;">
+                                Deceler Technologies • Sep 2023 - Nov 2023
+                            </p>
                         </div>
                     </div>
-                    <div class="duration">Jun 2025 - Sep 2025 · 4 mos · Chennai, India</div>
-                    <ul class="exp-desc">
-                        <li>Programmed and deployed Aubo collaborative robots (cobots) using Python, ROS 2, and MoveIt2.
-                        </li>
-                        <li>Executed mapping & navigation for Iplusmbot AMRs, leveraging SLAM for industrial navigation.
-                        </li>
-                        <li>Tested REST API integrations for robot fleet control and cloud-based orchestration.</li>
-                        <li>Integrated electric and vacuum grippers for advanced industrial automation workflows.</li>
-                        <li>Collaborated on end-to-end industrial automation solutions aligned with modern industry
-                            needs.</li>
-                    </ul>
+                    <p class="exp-desc">
+                        Worked on industrial automation projects involving robotic arm manipulation using MoveIt2.
+                        Developed custom motion planning pipelines, integrated computer vision for object detection and
+                        pick-and-place operations, and programmed PLCs for manufacturing workflows. Contributed to
+                        system integration and factory floor deployment.
+                    </p>
                     <div class="project-tech" style="margin-top: 12px;">
-                        <span>Python</span>
+                        <span>ROS 2</span>
                         <span>MoveIt2</span>
+                        <span>Python</span>
                         <span>Industrial Automation</span>
                     </div>
                 </div>

@@ -696,7 +696,7 @@ footer {
   }
 
   .hero-image {
-    max-width: 250px;
+    max-width: 500px;
   }
 
   h1 {
@@ -719,6 +719,19 @@ footer {
 
   .container {
     padding: 0 16px;
+  }
+
+  /* About section - stack vertically on mobile */
+  #about>div>div {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  #about img {
+    max-height: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
   }
 
   /* Section titles */
