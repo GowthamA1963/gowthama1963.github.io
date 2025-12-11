@@ -290,27 +290,33 @@ body {
 }
 
 /* Skills */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+.skills-category {
+  margin-bottom: 32px;
 }
 
-.skill-item {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  padding: 16px;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  border-left: 2px solid transparent;
-  transition: 0.3s;
-}
-
-.skill-item:hover {
-  border-left-color: var(--accent-color);
+.category-title {
+  font-size: 1.1rem;
   color: var(--accent-color);
-  transform: translateX(5px);
+  font-family: var(--font-mono);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.skills-badges img {
+  height: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-badges img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
 }
 
 /* Projects */
@@ -493,15 +499,21 @@ footer {
     width: 100px;
   }
 
-  /* Skills Grid */
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
+  /* Skills Badges */
+  .skills-category {
+    margin-bottom: 24px;
   }
 
-  .skill-item {
-    padding: 12px;
-    font-size: 0.85rem;
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .skills-badges {
+    gap: 8px;
+  }
+
+  .skills-badges img {
+    height: 24px;
   }
 
   /* Experience Timeline */
@@ -631,8 +643,8 @@ footer {
     width: 60px;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .skills-badges img {
+    height: 22px;
   }
 
   .experience-card {
