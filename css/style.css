@@ -1,16 +1,182 @@
 /* Global Styles */
 :root {
   --bg-color: #050608;
-  --surface-color: #0f1216;
-  --text-primary: #e6e6e6;
+  --surface-color: #0a0e14;
+  --text-primary: #e6f1ff;
   --text-secondary: #8892b0;
   --accent-color: #64ffda;
   /* Neon Cyan */
   --accent-glow: rgba(100, 255, 218, 0.2);
-  --border-color: #233554;
+  --border-color: #1e2a3a;
   --font-display: 'Rajdhani', sans-serif;
   --font-mono: 'Roboto Mono', monospace;
 }
+
+/* Page Transition */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.page-transition.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.node-graph {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+}
+
+.node {
+  fill: var(--surface-color);
+  stroke: var(--accent-color);
+  stroke-width: 2;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.connection {
+  stroke: var(--accent-color);
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.3;
+}
+
+.node-label {
+  fill: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  opacity: 0;
+}
+
+/* Animation when active */
+.page-transition.active .node {
+  animation: nodeAppear 0.4s ease forwards;
+}
+
+.page-transition.active .node:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.page-transition.active .node:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.page-transition.active .node:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.page-transition.active .node:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.page-transition.active .node:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.page-transition.active .node:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.page-transition.active .connection {
+  animation: drawLine 0.5s ease forwards;
+}
+
+.page-transition.active .connection:nth-child(7) {
+  animation-delay: 0.15s;
+}
+
+.page-transition.active .connection:nth-child(8) {
+  animation-delay: 0.25s;
+}
+
+.page-transition.active .connection:nth-child(9) {
+  animation-delay: 0.35s;
+}
+
+.page-transition.active .connection:nth-child(10) {
+  animation-delay: 0.45s;
+}
+
+.page-transition.active .connection:nth-child(11) {
+  animation-delay: 0.55s;
+}
+
+.page-transition.active .connection:nth-child(12) {
+  animation-delay: 0.65s;
+}
+
+.page-transition.active .node-label {
+  animation: labelAppear 0.3s ease forwards;
+}
+
+.page-transition.active .node-label:nth-child(13) {
+  animation-delay: 0.2s;
+}
+
+.page-transition.active .node-label:nth-child(14) {
+  animation-delay: 0.3s;
+}
+
+.page-transition.active .node-label:nth-child(15) {
+  animation-delay: 0.4s;
+}
+
+.page-transition.active .node-label:nth-child(16) {
+  animation-delay: 0.5s;
+}
+
+.page-transition.active .node-label:nth-child(17) {
+  animation-delay: 0.6s;
+}
+
+.page-transition.active .node-label:nth-child(18) {
+  animation-delay: 0.7s;
+}
+
+@keyframes nodeAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+}
+
+@keyframes labelAppear {
+  to {
+    opacity: 1;
+  }
+}
+
 
 * {
   box-sizing: border-box;

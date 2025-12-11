@@ -15,6 +15,34 @@
 </head>
 
 <body>
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition">
+        <svg class="node-graph" viewBox="0 0 800 400">
+            <!-- Nodes -->
+            <circle class="node" cx="150" cy="200" r="20" />
+            <circle class="node" cx="350" cy="120" r="20" />
+            <circle class="node" cx="350" cy="280" r="20" />
+            <circle class="node" cx="550" cy="200" r="20" />
+            <circle class="node" cx="650" cy="150" r="20" />
+            <circle class="node" cx="650" cy="250" r="20" />
+
+            <!-- Connections -->
+            <line class="connection" x1="150" y1="200" x2="350" y2="120" />
+            <line class="connection" x1="150" y1="200" x2="350" y2="280" />
+            <line class="connection" x1="350" y1="120" x2="550" y2="200" />
+            <line class="connection" x1="350" y1="280" x2="550" y2="200" />
+            <line class="connection" x1="550" y1="200" x2="650" y2="150" />
+            <line class="connection" x1="550" y1="200" x2="650" y2="250" />
+
+            <!-- Node Labels -->
+            <text class="node-label" x="150" y="240" text-anchor="middle">/sensor</text>
+            <text class="node-label" x="350" y="105" text-anchor="middle">/filter</text>
+            <text class="node-label" x="350" y="310" text-anchor="middle">/planner</text>
+            <text class="node-label" x="550" y="240" text-anchor="middle">/controller</text>
+            <text class="node-label" x="650" y="135" text-anchor="middle">/cmd_vel</text>
+            <text class="node-label" x="650" y="280" text-anchor="middle">/odom</text>
+        </svg>
+    </div>
 
     <a href="#" class="brand">GA</a>
 

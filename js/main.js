@@ -48,4 +48,37 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(category);
   });
 
+  /* Page Transition Effect */
+  const transition = document.getElementById('page-transition');
+
+  // Intercept all internal links
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+
+    // Check if it's an internal link (not external, not anchor-only)
+    if (link && link.href &&
+      link.hostname === window.location.hostname &&
+      !link.href.includes('#') &&
+      link.href !== window.location.href) {
+
+      e.preventDefault();
+      const destination = link.href;
+
+      // Show transition
+      transition.classList.add('active');
+
+      // Navigate after animation
+      setTimeout(() => {
+        window.location.href = destination;
+      }, 1200); // Total animation duration
+    }
+  });
+
+  // Hide transition on page load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      transition.classList.remove('active');
+    }, 100);
+  });
+
 });
