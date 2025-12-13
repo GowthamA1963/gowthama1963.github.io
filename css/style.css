@@ -321,8 +321,8 @@ nav a:hover::before {
 }
 
 .social-icon {
-  width: 5px;
-  height: 5px;
+  width: 32px;
+  height: 32px;
   color: var(--accent-color);
   flex-shrink: 0;
 }
