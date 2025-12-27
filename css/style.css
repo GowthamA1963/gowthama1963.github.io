@@ -473,6 +473,17 @@ h2.subtitle {
   background: rgba(100, 255, 218, 0.1);
 }
 
+.btn-secondary {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: rgba(100, 255, 218, 0.9);
+  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+}
+
 /* Section Styling */
 section {
   padding: 100px 0;
