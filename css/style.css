@@ -798,26 +798,35 @@ footer {
   }
 
   /* About section - stack vertically on mobile */
-  #about>div>div {
+  .about-grid {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    gap: 32px !important;
   }
 
-  #about>div>div>div:first-child p {
-    font-size: 1rem !important;
+  .about-grid>div:first-child p {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 16px !important;
   }
 
-  #about>div>div>div:last-child {
+  .about-grid>div:last-child {
     position: static !important;
-    max-width: 100%;
+    max-width: 100% !important;
+    order: -1;
+    /* Show images first on mobile */
   }
 
-  #about img {
-    max-width: 100%;
-    max-height: 300px;
-    margin: 0 auto;
-    display: block;
-    object-fit: contain;
+  .about-grid img {
+    max-width: 100% !important;
+    max-height: 250px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  .about-grid p[style*="text-align: center"] {
+    font-size: 0.75rem !important;
   }
 
   /* Section titles */
@@ -926,6 +935,35 @@ footer {
   .btn {
     padding: 10px 20px;
     font-size: 0.85rem;
+    width: 100%;
+    /* Full width on mobile */
+    justify-content: center;
+  }
+
+  /* Hero buttons container */
+  header div[style*="display: flex"] {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  /* Education section mobile */
+  #education .experience-card {
+    padding: 16px;
+  }
+
+  #education .exp-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center !important;
+  }
+
+  #education .exp-header img {
+    margin-bottom: 12px;
+  }
+
+  #education div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
   /* Footer */
