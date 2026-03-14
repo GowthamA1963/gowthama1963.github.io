@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone IMU → ROS2 Sensor Fusion | Gowtham Ammanamanchi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Page Transition Overlay -->
+  <div id="page-transition" class="page-transition">
+    <svg class="node-graph" viewBox="0 0 800 400">
+      <circle class="node" cx="150" cy="200" r="20" />
+      <circle class="node" cx="350" cy="120" r="20" />
+      <circle class="node" cx="350" cy="280" r="20" />
+      <circle class="node" cx="550" cy="200" r="20" />
+      <circle class="node" cx="650" cy="150" r="20" />
+      <circle class="node" cx="650" cy="250" r="20" />
+      <line class="connection" x1="150" y1="200" x2="350" y2="120" />
+      <line class="connection" x1="150" y1="200" x2="350" y2="280" />
+      <line class="connection" x1="350" y1="120" x2="550" y2="200" />
+      <line class="connection" x1="350" y1="280" x2="550" y2="200" />
+      <line class="connection" x1="550" y1="200" x2="650" y2="150" />
+      <line class="connection" x1="550" y1="200" x2="650" y2="250" />
+      <text class="node-label" x="150" y="240" text-anchor="middle">/sensor</text>
+      <text class="node-label" x="350" y="105" text-anchor="middle">/filter</text>
+      <text class="node-label" x="350" y="310" text-anchor="middle">/planner</text>
+      <text class="node-label" x="550" y="240" text-anchor="middle">/controller</text>
+      <text class="node-label" x="650" y="135" text-anchor="middle">/cmd_vel</text>
+      <text class="node-label" x="650" y="280" text-anchor="middle">/odom</text>
+    </svg>
+  </div>
+
+  <a href="#" class="brand">GA</a>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Work</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="project-detail-header">
+      <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+      <h1 style="font-size: 3rem; margin-bottom: 16px;">📱 Phone IMU → ROS2 Sensor Fusion</h1>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 24px;">
+        Real-time IMU sensor fusion using a smartphone as the sensor, ROS2 as the middleware, and a complementary filter to estimate 3D orientation.
+      </p>
+      <div class="tech-tag-list">
+        <span class="tech-tag">ROS 2</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Sensor Fusion</span>
+        <span class="tech-tag">IMU</span>
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">RViz2</span>
+      </div>
+      <div style="margin-top: 16px;">
+        <a href="https://github.com/GowthamA1963/phone_imu" target="_blank"
+          style="color: var(--accent-color); font-family: var(--font-mono); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          View Source Code on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-content">
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Demo</h2>
+      <div style="margin-bottom: 32px; text-align: center;">
+        <img src="../images/phone-imu.gif" alt="Phone IMU Demo"
+          style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px;">Live 3D orientation visualization in RViz2</p>
+      </div>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Architecture</h2>
+      <p style="margin-bottom: 24px;">
+        The system utilizes the <strong>Phyphox</strong> app to stream IMU data (accelerometer and gyroscope) over WiFi via a REST API. A custom ROS2 node polls this endpoint at 50Hz, publishing raw data to the <code>/imu/data_raw</code> topic.
+      </p>
+      <div style="background: rgba(10, 25, 47, 0.6); padding: 24px; border-radius: 8px; margin-bottom: 32px; border: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.9rem; overflow-x: auto;">
+        <pre style="margin: 0;">
+Phone (Phyphox App)
+      ↓  HTTP REST @ 50 Hz over WiFi
+phone_imu_node  →  /imu/data_raw  (sensor_msgs/Imu)
+                          ↓
+                  imu_filter_node  (Complementary Filter)
+                          ↓
+                    /imu/data  (sensor_msgs/Imu + quaternion)
+                    /imu/markers  (visualization_msgs/MarkerArray)
+                    TF: world → phone_imu
+                          ↓
+                        RViz2
+        </pre>
+      </div>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Sensor Fusion — Complementary Filter</h2>
+      <p style="margin-bottom: 24px;">
+        The filter fuses gyroscope and accelerometer data to estimate roll, pitch, and yaw. It leverages the short-term accuracy of the gyroscope and the long-term stability of the accelerometer.
+      </p>
+      <div style="margin-bottom: 32px;">
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--accent-color); text-align: left;">
+              <th style="padding: 12px;">Source</th>
+              <th style="padding: 12px;">Short-term</th>
+              <th style="padding: 12px;">Long-term</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 12px;">Gyroscope</td>
+              <td style="padding: 12px; color: #4ECDC4;">✅ Accurate</td>
+              <td style="padding: 12px; color: #FF6B6B;">❌ Drifts</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 12px;">Accelerometer</td>
+              <td style="padding: 12px; color: #FF6B6B;">❌ Noisy</td>
+              <td style="padding: 12px; color: #4ECDC4;">✅ Stable tilt</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 12px;"><strong>Fused (α=0.98)</strong></td>
+              <td style="padding: 12px; color: #4ECDC4;">✅ Smooth</td>
+              <td style="padding: 12px; color: #4ECDC4;">✅ Drift-corrected</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">
+          Default alpha 0.98 = 98% gyro trust, 2% accelerometer correction per step.
+        </p>
+      </div>
+
+      <h2 style="color: var(--accent-color); margin-bottom: 16px;">Key Features</h2>
+      <ul style="margin-left: 24px; margin-bottom: 32px; color: var(--text-secondary);">
+        <li style="margin-bottom: 12px;"><strong>Real-time Streaming:</strong> Low-latency data ingestion from mobile sensors.</li>
+        <li style="margin-bottom: 12px;"><strong>Visual Feedback:</strong> RViz2 markers that change color based on angular velocity.</li>
+        <li style="margin-bottom: 12px;"><strong>TF2 Integration:</strong> Publishes dynamic transforms from world to phone frame.</li>
+        <li style="margin-bottom: 12px;"><strong>Modular Design:</strong> Separated data acquisition and filter nodes for better ROS2 architecture.</li>
+      </ul>
+
+      <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 100px;">
+    <p>Built by Gowtham Ammanamanchi</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
